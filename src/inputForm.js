@@ -11,6 +11,9 @@ function isUrlValid(userInput) {
     if(res == null)
         return false;
     else
+    if (!/^(f|ht)tps?:\/\//i.test(userInput)) {
+return false;
+    }
         return true;
 }
 
